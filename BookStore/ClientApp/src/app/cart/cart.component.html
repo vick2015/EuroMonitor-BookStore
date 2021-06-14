@@ -1,0 +1,18 @@
+<button type="button" class="btn btn-primary" (click)="BuyBook()">Buy Book</button>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+    <div class="modal-body">
+     <div class="modal-body" *ngIf="order != undefined">
+         <h3>Order Placed Successfully </h3><br/>
+         <b>Order Id</b> : {{order.orderID}} <br/>
+         <b>Order Date & Time</b> : {{order.orderDateTime}}
+
+        </div>
+    </div>
+  </ng-template>

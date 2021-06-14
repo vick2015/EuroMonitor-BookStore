@@ -1,0 +1,22 @@
+<p>My Orders</p>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col"># Order Id</th>
+    <th scope="col">Book Details</th>
+    <th scope="col">Order Date & Time</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let order of orders; index as i">
+    <td>
+      {{ order.orderID }}
+    </td>
+    <td>
+        <app-book-details [BookId] = "order.bookId"></app-book-details>
+    </td>
+    <td>{{ order.orderDateTime  }}</td>
+  </tr>
+  </tbody>
+</table>

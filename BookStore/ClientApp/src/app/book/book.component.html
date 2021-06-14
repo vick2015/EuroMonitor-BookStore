@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+      <div class = "col-sm-4" style="margin-bottom:25px" *ngFor="let book of books">
+            <app-book-details [book]="book"></app-book-details>
+            <br/> <br/>
+            <app-cart [bookId]=book.bookId></app-cart>
+            <br/>
+      </div> 
+      <br/>
+    </div>
+  </div>
